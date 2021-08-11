@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+
+
+        <div class="col-md-3">
+           <div class="fixed-centre">
+              <div class="shadow-sm card border-success mb-3" >
+                  <div class="card-header">Edit</div>
+                    <div class="card-body text-success">
+                          <form method="POST">
+                                {% csrf_token %}
+                                {{f.as_p}}
+                                <button class="btn btn-success" type="submit">confirm</button>
+                          </form>
+                    </div>
+                </div>
+           </div>
+        </div>
+{% endblock %}
+
+
